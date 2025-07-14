@@ -1,4 +1,19 @@
 /* Footer Styles */
+
+/* WHAT AI suggested:
+footer {
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 30px !important;
+  background-color: #f0f0f0 !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  line-height: 1.5 !important;
+}
+
+What I added:
+*/
 footer {
   background-color: #000000 !important;
   margin: auto !important;
@@ -35,7 +50,19 @@ footer p {
     font-size: 12px !important;
   }
 }
+/* WHAT AI suggested:
 
+@media (min-height: 710px) {
+  footer {
+    height: 30px !important;
+    font-size: 14px !important;
+    padding: 10px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+What I added:
+*/
 @media (min-height: 710px) {
   footer {
     position: fixed !important;
@@ -45,6 +72,7 @@ footer p {
     padding: 10px !important;
   }
 }
+
 
 @media (prefers-color-scheme: light) {
   footer {
