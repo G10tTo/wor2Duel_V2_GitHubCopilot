@@ -1,0 +1,29 @@
+.round-table-container {
+  margin-top: 2rem;
+}
+
+.round-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.round-table th, .round-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.user-win {
+  background-color: #e0f6e9; /* verde chiaro */
+}
+
+.ai-win {
+  background-color: #fce0e0; /* rosso chiaro */
+}
+
+td em {
+  color: #777;
+  font-style: italic;
+  font-size: 0.9em;
+}

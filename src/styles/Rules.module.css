@@ -1,0 +1,60 @@
+.rulesOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rulesBox {
+  background-color: black;
+  padding: 2rem;
+  max-width: 600px;
+  width: 80%;
+  border-radius: 12px;
+  position: relative;
+  text-align: left;
+
+  border: #3300ff 3px solid !important;
+  box-shadow: 0 0 20px rgba(0, 81, 255, 0.8) !important;
+
+}
+
+.rulesBox h2 {
+  margin-top: 0;
+}
+
+.rulesBox ul {
+  padding-left: 1.2rem;
+
+  list-style-type: circle;
+
+  line-height: 25px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border: #ffffff 1px solid;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  .rulesBox {
+    background-color: #ffffff;
+  }
+
+  .closeButton {
+    border: #000000 1px solid;
+  }
+}

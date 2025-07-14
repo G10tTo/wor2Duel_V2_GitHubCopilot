@@ -1,0 +1,53 @@
+/* Footer Styles */
+footer {
+  background-color: #000000 !important;
+  margin: auto !important;
+
+  bottom: 0 !important;
+  width: 100% !important;
+
+  height: 25px !important;
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 10px !important;
+
+  z-index: 20 !important;
+  border-top: #3300ff 2px solid !important;
+  box-shadow: 0 -5px 20px rgba(0, 81, 255, 0.7) !important;
+
+  transition: all 0.5s ease !important;
+
+}
+
+footer p {
+  margin: auto !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 649px) {
+  body {
+    margin-bottom: 0px !important;
+  }
+
+  footer {
+    height: auto !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (min-height: 710px) {
+  footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 30px !important;
+    padding: 10px !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  footer {
+    background-color: #ebedfd !important;
+  }
+}

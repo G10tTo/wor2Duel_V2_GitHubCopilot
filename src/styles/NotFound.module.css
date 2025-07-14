@@ -1,0 +1,27 @@
+.BoxContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.BoxContainer h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+.BoxContainer p {
+    font-size: 1.5rem;
+}
+
+.link {
+    color: #3300ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 450px) {
+    .BoxContainer {
+        height: 650px;
+
+    }
+}

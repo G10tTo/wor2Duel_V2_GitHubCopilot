@@ -1,0 +1,129 @@
+.App {
+  max-width: 500px;
+  margin: calc((84vh - 500px) / 2) auto;
+  margin-bottom: 30px;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.circleCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px !important;
+  font-family: monospace !important;
+}
+
+.circleContainer {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 2rem auto;
+
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgb(0, 91, 203);
+}
+
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+
+  width: 100px;
+
+  height: 40px;
+
+  border-radius: 8px;
+}
+
+.score:nth-child(1) {
+  border: 1px solid #16cd22a5 !important;
+  box-shadow: 0 0 10px #16cd22 !important;
+}
+
+.score:nth-child(2) {
+  border: 1px solid #d20101a5 !important;
+  box-shadow: 0 0 10px #d20101 !important;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls button {
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: color 0.25s;
+
+  font-size: 15px !important;
+  font-family: monospace !important;
+}
+
+.controls button:hover, .results button:hover {
+  border-color: #646cff;
+}
+
+.results button {
+  width: 130px;
+  height: 40px;
+
+  border-radius: 8px;
+  transition: border-color 0.25s;
+  transition: color 0.25s;
+  border: 1px solid transparent;
+
+  background-color: #1a1a1a;
+  cursor: pointer;
+  
+
+  font-size: 15px !important;
+  font-family: monospace !important;
+}
+
+
+@media (prefers-color-scheme: light) {
+  .controls button, .results button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  .controls button:hover, .results button:hover {
+    color: #646cff;
+  }
+  
+}
+  
+
+@media (max-height: 710px) {
+  .App {
+    margin: 20px auto;
+  }
+}

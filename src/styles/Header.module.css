@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  top: 0;
+
+  background-color: #000000 !important;
+  border-bottom: #3300ff 2px solid !important;
+  box-shadow: -5px 0 20px rgba(0, 81, 255, 0.7) !important;
+
+  transition: all 0.5s ease !important;
+}
+
+.header h1 {
+  background: linear-gradient(45deg, #3300ff, #2db4cf) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+@media (prefers-color-scheme: light) {
+  .header {
+      background-color: #ebedfd !important;
+  }
+}

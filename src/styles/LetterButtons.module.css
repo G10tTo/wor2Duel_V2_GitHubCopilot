@@ -1,0 +1,52 @@
+.letters button {
+  margin: 3px;
+  padding: 10px 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.letterButtons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.letterButtons button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+  
+  font-size: 20px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 50px;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  user-select: none;
+  transition: border-color 0.25s;
+
+  cursor: pointer;
+}
+
+.letterButtons button:hover {
+  border-color: #3300ff;
+}
+
+.letterButtons button:disabled:hover {
+  border-color: transparent;
+  cursor: default;
+}
+
+.letterButtons button:disabled {
+  background-color: transparent;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
