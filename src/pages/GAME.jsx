@@ -18,7 +18,7 @@ function App() {
 
   const turnTimer = useRef(null);
 
-  const registraRound = async (word, winner) => {
+  const registerRound = async (word, winner) => {
     const valid = await isValidWord(word);
     const round = { word, winner, valid };
     setRounds(prev => [...prev, round]);
@@ -54,7 +54,7 @@ function App() {
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
       setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registraRound(newSeq, 'user');
+      registerRound(newSeq, 'user');
       setCurrentPlayer(null); // End of round
       return;
     }
@@ -63,7 +63,7 @@ function App() {
     if (possible.length === 0) {
       // if no possible words, AI score 1 point
       setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
-      registraRound(newSeq, 'ai');
+      registerRound(newSeq, 'ai');
       setCurrentPlayer(null);
       return;
     }
@@ -77,7 +77,7 @@ function App() {
 
     if (possible.length === 0) {
       setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registraRound(sequence, 'user');
+      registerRound(sequence, 'user');
       setCurrentPlayer(null);
       return;
     }
@@ -86,7 +86,7 @@ function App() {
 
     if (nextLetters.length === 0) {
       setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registraRound(sequence, 'user');
+      registerRound(sequence, 'user');
       setCurrentPlayer(null);
       return;
     }
@@ -96,7 +96,7 @@ function App() {
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
       setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
-      registraRound(newSeq, 'ai');
+      registerRound(newSeq, 'ai');
       setSequence('');
       setCurrentPlayer(null);
       return;
