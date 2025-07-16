@@ -14,12 +14,19 @@
   text-align: center;
 }
 
-.user-win {
-  background-color: #e0f6e9; /* verde chiaro */
+.userWin {
+  color: #2c662d;
+  font-weight: bold;
 }
 
-.ai-win {
-  background-color: #fce0e0; /* rosso chiaro */
+.aiWin {
+  color: #9c2c2c;
+  font-weight: bold;
+}
+
+.aiWin a, .userWin a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 td em {

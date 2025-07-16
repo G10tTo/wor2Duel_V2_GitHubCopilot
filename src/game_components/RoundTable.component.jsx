@@ -19,7 +19,7 @@ const RoundTable = ({ rounds, onClose }) => {
               {rounds.map((round, index) => (
                 <tr
                   key={index}
-                  className={round.winner === 'user' ? 'user-win' : 'ai-win'}
+                  className={round.winner === 'user' ? RTs.userWin : RTs.aiWin}
                 >
                   <td>
                     {round.valid ? (
