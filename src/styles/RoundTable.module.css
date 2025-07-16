@@ -1,14 +1,14 @@
-.round-table-container {
+.roundTableContainer {
   margin-top: 2rem;
 }
 
-.round-table {
+.roundTable {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
-.round-table th, .round-table td {
+.roundTable th, .roundTable td {
   padding: 8px 12px;
   border: 1px solid #ddd;
   text-align: center;
