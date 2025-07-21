@@ -128,7 +128,7 @@
   }
 }
 
-/* Responsive design for smaller devices */
+/* D4_T1 ---> */
 @media (max-width: 535px) {
   .App {
     max-width: 320px;
@@ -170,4 +170,5 @@
     height: 35px;
     font-size: 13px !important;
   }
-}
+}/*
+<--- */
