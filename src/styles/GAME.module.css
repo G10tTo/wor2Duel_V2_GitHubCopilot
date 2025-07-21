@@ -27,9 +27,21 @@
   margin: 2rem auto;
 
   border-radius: 50%;
-  box-shadow: 0 0 15px rgb(0, 91, 203);
+  box-shadow: 0 0 15px var(--circle-shadow-color);
+}
+/* D4_T5 ---> */
+:root {
+  --circle-shadow-color: rgb(0, 91, 203);
 }
 
+.circleContainer.player-turn {
+  --circle-shadow-color: rgb(0, 203, 91);
+}
+
+.circleContainer.ai-turn {
+  --circle-shadow-color: rgb(203, 0, 91);
+}/*
+<--- */
 
 .scores {
   display: flex;

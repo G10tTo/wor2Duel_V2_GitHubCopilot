@@ -133,7 +133,7 @@ function App() {
         </div>
       )}
 
-      <div className={Gs.circleContainer}>
+      <div className={`${Gs.circleContainer} ${currentPlayer === 'user' ? Gs.playerTurn : Gs.aiTurn}`}> {/* D4_T5 */}
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
 
         <div className={Gs.circleCenter}>
