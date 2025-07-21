@@ -6,6 +6,14 @@ const LetterButtons = ({ onClick, disabled }) => {
   const centerX = 250;
   const centerY = 250;
 
+  /* D4_T3 ---> */
+  const handleKeyDown = (event, letter) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      onClick(letter);
+    }
+  };/*
+  <--- */
+
   return (
     <div className={LBs.letterButtons}>
       {alphabet.map((letter, index) => {
@@ -17,8 +25,11 @@ const LetterButtons = ({ onClick, disabled }) => {
           <button
             key={letter}
             onClick={() => onClick(letter)}
+            onKeyDown={(event) => handleKeyDown(event, letter)}  /* D4_T3 */
             disabled={disabled}
+            tabIndex={disabled ? -1 : 0}  /* D4_T3 */
             style={{ left: `${x}px`, top: `${y}px` }}
+            aria-label={`Letter ${letter}`}  /* D4_T3 */
           >
             {letter}
           </button>
