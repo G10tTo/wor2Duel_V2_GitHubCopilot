@@ -8,7 +8,7 @@ const RoundTable = ({ rounds, onClose }) => {
         <button className={Rs.closeButton} onClick={onClose}>✕</button>
         <h2>Round's Results</h2>
         <div className={RTs.roundTableContainer}>
-          <div className={RTs.scrollableContainer}> {/* Added scrollable container */}
+          <div className={RTs.scrollableContainer}> {/* D4_T6 */}
             <table className={RTs.roundTable}>
               <thead>
                 <tr>

@@ -6,6 +6,7 @@ import GameRules from '../game_components/Rules.component';
 
 import { isValidWord, getPossibleWords } from '../game_components/dictionary';
 import Gs from '../styles/GAME.module.css';
+import { updateScore, registerRound } from '../utils/scoring';
 
 function App() {
   const [sequence, setSequence] = useState('');
@@ -30,11 +31,11 @@ function App() {
   }, []);/* 
   <--- */
 
-  const registerRound = async (word, winner) => {
+  const registerRoundAsync = async (word, winner) => {
     const valid = await isValidWord(word);
     const round = { word, winner, valid };
     setRounds(prev => [...prev, round]);
-    setLastCompletedWord(round); // ✅ salva sempre la parola
+    setLastCompletedWord(round);
   };
 
   const startNewRound = () => {
@@ -65,17 +66,16 @@ function App() {
     setSequence(newSeq);
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registerRound(newSeq, 'user');
+      setScore(prev => updateScore(prev, 'user'));
+      registerRoundAsync(newSeq, 'user');
       setCurrentPlayer(null); // End of round
       return;
     }
 
     const possible = await getPossibleWords(newSeq);
     if (possible.length === 0) {
-      // if no possible words, AI score 1 point
-      setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
-      registerRound(newSeq, 'ai');
+      setScore(prev => updateScore(prev, 'ai'));
+      registerRoundAsync(newSeq, 'ai');
       setCurrentPlayer(null);
       return;
     }
@@ -88,8 +88,8 @@ function App() {
     const possible = await getPossibleWords(sequence);
 
     if (possible.length === 0) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registerRound(sequence, 'user');
+      setScore(prev => updateScore(prev, 'user'));
+      registerRoundAsync(sequence, 'user');
       setCurrentPlayer(null);
       return;
     }
@@ -97,8 +97,8 @@ function App() {
     const nextLetters = possible.map(w => w[sequence.length]).filter(Boolean);
 
     if (nextLetters.length === 0) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
-      registerRound(sequence, 'user');
+      setScore(prev => updateScore(prev, 'user'));
+      registerRoundAsync(sequence, 'user');
       setCurrentPlayer(null);
       return;
     }
@@ -107,8 +107,8 @@ function App() {
     const newSeq = sequence + nextLetter.toLowerCase();
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
-      setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
-      registerRound(newSeq, 'ai');
+      setScore(prev => updateScore(prev, 'ai'));
+      registerRoundAsync(newSeq, 'ai');
       setSequence('');
       setCurrentPlayer(null);
       return;
