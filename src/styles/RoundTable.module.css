@@ -2,6 +2,13 @@
   margin-top: 2rem;
 }
 
+/* D4_T6 ---> */
+.scrollableContainer { /* Added styles for scrollable container */
+  max-height: 400px;
+  overflow-y: auto;
+}/*
+<--- */
+
 .roundTable {
   width: 100%;
   border-collapse: collapse;
