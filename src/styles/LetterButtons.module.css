@@ -50,3 +50,13 @@
   opacity: 0.8;
   cursor: not-allowed;
 }
+
+/* Responsive design for smaller devices */
+@media (max-width: 535px) {
+  .letterButtons button {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
