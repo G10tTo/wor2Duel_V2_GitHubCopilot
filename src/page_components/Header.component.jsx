@@ -19,7 +19,7 @@ const Header = ({ onRestart }) => {
     <header className={Hs.header}>
       <h1>WOR(2D)UEL</h1>
       <button className={Hs.restartButton} onClick={onRestart}>Restart Game</button> {/* D4_T4 */}
-      <button onClick={toggleDarkMode}>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</button>
+      <button onClick={toggleDarkMode}>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</button> {/* D4_T7 */}
     </header>
   );
 };

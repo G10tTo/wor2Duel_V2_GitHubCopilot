@@ -31,13 +31,15 @@ function App() {
   }, []);/* 
   <--- */
 
+  /* D4_T8  ---> */
   const registerRoundAsync = async (word, winner) => {
     const valid = await isValidWord(word);
     const round = { word, winner, valid };
     setRounds(prev => [...prev, round]);
     setLastCompletedWord(round);
-  };
-
+  };/* 
+  <--- */
+  
   const startNewRound = () => {
     clearTimeout(turnTimer.current);
     setSequence('');
